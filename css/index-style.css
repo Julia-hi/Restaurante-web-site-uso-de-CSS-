@@ -1,0 +1,74 @@
+/* Estilos solo para pagina principal index.html */
+
+
+.promo, .dishes{
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    
+}
+
+
+
+
+
+.promo img{
+   
+    align-self: center;
+    float: none;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+
+border-radius:  40%/30%;  /* border con forma elíptica - 40% de anchura de imagen y 30% de altura de imagen */
+text-align: center;
+object-fit: cover;
+}
+
+.promo-price{
+    font-size: 1.5em;
+    font-weight: bold;  
+}
+
+.promo-price:hover::after{
+    content: "  Solo desde 1 hasta 3 de diciembre!";
+    color: #FF7F00;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.button{
+    color: #fff;
+    width: auto;
+    height: auto;
+    background-color: #FF7F00;
+    padding: 10px 20px;
+    border-radius:  40%/30%;
+    font-size: 2em;
+    
+}
+
+.dishes>h2::after{
+    clear: both;
+}
+
+.dishes-content{
+    display: grid;
+    width: 100%;
+    /* Definimos las columnas y filas*/
+    grid-template-columns: auto auto auto auto;
+     
+    /* Definimos la separación*/
+    
+    
+  grid-gap: 10px;
+}
+
+.dishes-content>img{
+/*width: 25%;*/
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
