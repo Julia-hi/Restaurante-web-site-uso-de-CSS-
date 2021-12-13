@@ -9,14 +9,18 @@ html{
     margin: 0;
     padding: 0;
     font-size: 1.2em;
+    width: auto;
 }
 
 body{
     
     display: block;
-    max-width: 90vw;
+    width: 100%;
+    max-width: 1600px;
+    min-width: 320px;
     margin: auto;
     font-size: 1em;
+    color: #3f2000;
 }
 
 /*  ========== HEADER ==========   */
@@ -37,17 +41,38 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    vertical-align: middle;
 }
 
 #logo{
-    max-height: 15vh;
-    /*height: 40px;*/
+    width: 30vw;
+    min-width: 40px;
+    max-width: 250px;
+    height: auto;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+.login>a{
+    height: max-content;
+    margin: 0 10px;
 }
 
 
+
+.login:hover a {
+    color: #FF7F00;
+    filter:sepia(2);
+}
+
  a{
     text-decoration: none;
-    color: #000;
+    color: #3f2000;
     }
 
 .login a p{
@@ -63,10 +88,16 @@ width: 100%;
     max-width: 50px;
 }
 
+
+
+/* ========= MAIN =========  */
+
 nav{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    height: max-content;
+    background-color: #ffaf60;
 }
 
 ul { margin: 0; padding: 0; 
@@ -77,12 +108,14 @@ ul { margin: 0; padding: 0;
 
 ul li { 
     float: left; 
-    width: 10vw;
+    width: auto;
+    min-width: 10vw;
+    
     border-right: solid 1px #fff; } 
 
 ul li a { 
     display: block; 
-    padding: 0 auto; 
+    padding: 0 5px; 
     text-align: center;
     line-height: 2.1em; 
     text-decoration: none; 
@@ -91,48 +124,108 @@ ul li a {
 
 ul li a:hover { background-color: #FF7F00; }
 
-
-/* ========= MAIN =========  */
-
 main{
+    position: relative;
     min-height: 200px;
     height: max-content;
+    width: 100%;
 }
+
+#we img, #plates img, #promotion img, #reserve img{
+    height: 30px;
+    display: none;
+}
+
+#login-mobile{
+    display: none;
+}
+
 
 
 /* =========   FOOTER   ==========   */
 
 footer{
     height: 10vh;
-    max-height: 100px;
+    max-height: 80px;
 }
 
 .footer{
     position: relative;
-    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: min-content;
     background-color: #ffaf60;
     color: #fff;
-    padding: 20px;margin-top: 0;
+    padding: 20px;
+    margin-top: 0;
 }
 
 .footer-icons{
-    height: 40%;
-    max-height: 50px;
+    height: max-content;
+    max-height: 40px;
 }
 
-.footer-icons a img{
-    height: 100%;
-    margin-right: 1.5em;
+.footer-icons>a{
+    display: block;
+    float: left;
+    height: auto;
+}
+
+.footer-icons img{
+    height: 30px;
+    margin-right: 30px;
     filter: invert(1);
    }
 
    .footer-icons img:hover{
-filter: none;
+    filter: none;
    }
 
-
    /* para dispositivos con resolucion menos de 768px   */
-   @media (max-width:767px){
+@media (max-width:768px){
+
+    .container{
+        padding: 0 5px;
+    }
+
+    .container>div{
+        padding: 0 10px;
+    }
+       nav{
+           display: flex;
+           flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+       }
+
+    .login{
+    display: none;
+    }
+
+    ul li{
+        border: none;
+    }
+
+    #we>a:nth-child(1), #plates>a:nth-child(1), #promotion>a:nth-child(1), #reserve>a:nth-child(1){
+        display: none;
+    }
+
+
+   #we img, #plates img, #promotion img, #reserve img, #login-mobile{
+       height: 2em;
+    min-height: 30px;
+    display: inline;
+    margin: auto 5px;
+    padding: 7px;
+    vertical-align: middle;
+    width: auto;
+}
+
+    
+
+
 
 
    }

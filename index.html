@@ -17,12 +17,12 @@
     <header>
         <div class="container">
             <div class="header"><a href="#"><img id="logo" src="img/logo2.png" alt="Logo de restaurante Gurman"></a>
-                <!--   para nombre del restaurante uso etiqueta h1 porque el nombre es contenido más importante para buscadores en google  -->
-                <h1>Gurman</h1>
+                <!--   para nombre del restaurante uso etiqueta h1 porque el nombre es contenido más importante para buscadores de google  -->
+                <h1 id="name">Gurman</h1>
                 <!--   Zona de identificación   -->
                 <div class="login">
-                    <a href="#">
-                        <p>identifícate</p>
+                    <a id="login_text" href="#">
+                        identifícate
                     </a>
                     <a href="#"><img src="img/user.svg" alt="Icono con enlace para identificarse"></a>
                 </div>
@@ -38,11 +38,18 @@
             <!--   Zona de navegación   -->
             <nav>
                 <ul>
-                    <li><a href="#">nosotros</a></li>
-                    <li><a href="#">platos</a></li>
-                    <li><a href="promociones.html">promociones</a></li>
-                    <li><a href="#">reservas</a></li>
+                    <li id="we"><a href="#quien_somos">nosotros</a><a href="#quien_somos"><img
+                                src="img/nosotros_icono.png" alt="sobre nosotros icono"></a></li>
+                    <li id="plates"><a href="#platos">platos</a><a href="#platos"><img src="img/plato_icono.png"
+                                alt="icono de plato "></a></li>
+                    <li id="promotion"><a href="promociones.html">promociones</a><a href="promociones.html"><img
+                                src="img/promo_icono.png" alt="icono de promociones "></a></li>
+                    <li id="reserve"><a href="#">reservas</a><a href="#"><img src="img/reserva_icono.png"
+                                alt="icono de reservas"></a></li>
+
                 </ul>
+                <a href="#"><img id="login-mobile" src="img/user.svg" alt="Icono con enlace para identificarse"></a>
+
             </nav>
 
             <!--   Zona de promociónes   -->
@@ -54,29 +61,104 @@
                 <a href="promociones.html" class="button">Más detalles</a>
             </div>
             <!--   Zona de platos   -->
-            <div class="dishes">
+            <div class="dishes" id="platos">
                 <h2>Nuestros platos</h2>
                 <div class="dishes-content">
-                    <img src="img/food1.jpg" alt="">
-                    <img src="img/food2.jpg" alt="">
-                    <img src="img/food3.jpg" alt="">
-                    <img src="img/food4.jpg" alt="">
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <img src="img/food5.jpg" alt="">
-                    <img src="img/food6.jpg" alt="">
-                    <img src="img/food7.jpg" alt="">
-                    <img src="img/food8.jpg" alt="">
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
-                    <div class="dish-name"><p>Salmorejo</p><p>9.50€</p></div>
+                    <div id="plato1">
+                        <img src="img/food1.jpg" alt="plato de Salmorejo">
+                        <div class="dish-name">
+                            <p>Salmorejo</p>
+                            <p>5.50€</p>
+                        </div>
+                    </div>
+                    <div id="plato2"><img src="img/food2.jpg" alt="plato de sopa roja">
+                        <div class="dish-name">
+                            <p>Sopa roja</p>
+                            <p>6.80€</p>
+                        </div>
+                    </div>
+                    <div id="plato3"><img src="img/food3.jpg" alt="plato de ensalada mixta con naggets">
+                        <div class="dish-name">
+                            <p>Ensalada mixta con naggets</p>
+                            <p>8.50€</p>
+                        </div>
+                    </div>
+                    <div id="plato4"><img src="img/food4.jpg" alt="plato de ternera con patatas">
+                        <div class="dish-name">
+                            <p>Ternera con patatas</p>
+                            <p>19.00€</p>
+                        </div>
+                    </div>
+                    <div id="plato5"><img src="img/food5.jpg" alt="plato de salmon horneado">
+                        <div class="dish-name">
+                            <p>Salmon</p>
+                            <p>12.50€</p>
+                        </div>
+                    </div>
+                    <div id="plato6"> <img src="img/food6.jpg" alt="plato de Azu de ternera">
+                        <div class="dish-name">
+                            <p>Azu de ternera</p>
+                            <p>17.50€</p>
+                        </div>
+                    </div>
+                    <div id="plato7"><img src="img/food7.jpg" alt="plato de lomo assorti">
+                        <div class="dish-name">
+                            <p>Lomo assorti</p>
+                            <p>14.50€</p>
+                        </div>
+                    </div>
+                    <div id="plato8"><img src="img/food8.jpg" alt="plato de frutas con crema">
+                        <div class="dish-name">
+                            <p>Frutas del bosque</p>
+                            <p>6.50€</p>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
             <!--   Zona de información   -->
             <div class="info">
+                <div class="info-content">
+
+                    <img src="img/info-2.jpg" alt="interior del restaurante Gurman, zona de barra">
+
+                    <div class="info-text">
+                        <h3 id="quien_somos">Quien somos</h3>
+                        <article>
+                            <p>Esta pagina web está creada como tarea, el restaurante no existe en realidad. Gurman es
+                                un restaurante familiar, formado en año 1978, que ofrece toda la variedad de la
+                                cocina española con un toque de elegancia y sofistificación sin olvidar la esencia de la
+                                misma.</p>
+                            <p> Hace uso de las mejores materias primas de esta comarca y de esta tierra, de Adalucia.
+                                El entorno, su cuidada y distinguida decoración junto a su excelente cocina hacen que
+                                este sea un lugar extraordinario para cualquier comida, cena y evento.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="info-content">
+
+                    <a
+                        href="https://www.google.com/maps/place/IES+Trassierra/@37.8915729,-4.7999211,17z/data=!3m2!4b1!5s0xd6cdf452ba79ac9:0xd70d369e230b513a!4m5!3m4!1s0xd6cdf5b069498d9:0x810d06e06b60e1b4!8m2!3d37.8915729!4d-4.7977324">
+                        <img src="img/map.jpg" alt=""></a>
+
+                    <div class="info-text">
+                        <h3>Como llegar</h3>
+                        <article>
+                            <p>Dirección: Avenida Arroyo del Moro s/n – 14011 – Córdoba.
+                                Teléfono: 957 73 49 00.</p>
+                            <p> "Gurman"
+                                está ubicado en zona tranquila en noroeste de Córdoba. Esta pagina web está creada como
+                                tarea, el restaurante no existe en realidad.</p>
+                            <p>Esta pagina web está creada como
+                                tarea, el restaurante no existe en realidad. Disponemos
+                                aparcamiento
+                                gratuito para nuestros clientes.</p>
+                        </article>
+                    </div>
+                </div>
 
             </div>
         </div>
